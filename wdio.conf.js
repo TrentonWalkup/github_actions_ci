@@ -45,10 +45,17 @@ exports.config = {
   //
   capabilities: [
     {
+      maxInstances: 5,
+
       browserName: 'chrome',
       'goog:chromeOptions': {
-        headless: true,
+        args: ['--window-size=1200,900', '--headless'], //average size monitor
+        prefs: {
+          'profile.managed_default_content_settings.popups': 2,
+          'profile.managed_default_content_settings.notifications': 2,
+        },
       },
+      acceptInsecureCerts: true,
     },
   ],
   //
