@@ -8,12 +8,12 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
       - uses: nanasess/setup-chromedriver@master
         with:
-          chromedriver-version: '77.0.3865.40'
+          chromedriver-version: '86.0.4240.22'
       - run: |
           export DISPLAY=:99
           chromedriver --url-base=/wd/hub &
