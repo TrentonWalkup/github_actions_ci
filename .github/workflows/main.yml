@@ -11,7 +11,7 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - uses: nanasess/setup-chromedriver@master
+      - uses: trent/setup-chromedriver@master
         with:
           chromedriver-version: '86.0.4240.22'
       - run: |
